@@ -5,16 +5,17 @@ export const StyledHeader = styled.header`
   background-color: ${({ theme }) => theme.Colors.black};
   display: flex;
   justify-content: space-between;
-  padding: 20px 30px;
+  padding: 15px 30px;
+  width: 100%;
 `;
 
-export const StyledH1 = styled.h1`
+export const HeaderTitle = styled.h1`
   color: ${({ theme }) => theme.Colors.yellow};
   font-size: 20px;
   font-weight: 900;
 `;
 
-export const StyledHButton = styled.button`
+export const HeaderHButton = styled.button`
   align-items: center;
   background-color: ${({ theme }) => theme.Colors.lightRed};
   border-radius: 20px;
@@ -27,6 +28,6 @@ export const StyledHButton = styled.button`
 
   :hover {
     background-color: ${({ theme }) => theme.Colors.darkRed};
-    color: ${({ theme }) => theme.Colors.white};;
+    color: ${({ theme }) => theme.Colors.white};
   }
 `;

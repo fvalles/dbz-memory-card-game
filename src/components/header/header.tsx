@@ -1,5 +1,5 @@
 import logoImage from "../../assets/dragon-ball-logo.png";
-import { StyledH1, StyledHButton, StyledHeader } from "./styled-components";
+import { HeaderTitle, HeaderHButton, StyledHeader } from "./styled-components";
 
 /**
  * Constants
@@ -15,8 +15,8 @@ export const Header = () => {
   return (
     <StyledHeader>
       <img src={logoImage} width={LOGO_IMAGE_WIDTH} />
-      <StyledH1>DBZ Memory Card Game</StyledH1>
-      <StyledHButton>Reset</StyledHButton>
+      <HeaderTitle>DBZ Memory Card Game</HeaderTitle>
+      <HeaderHButton>Reset</HeaderHButton>
     </StyledHeader>
   );
 };
