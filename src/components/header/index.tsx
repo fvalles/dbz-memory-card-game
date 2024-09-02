@@ -1,13 +1,7 @@
-import './header.css';
-
-const Header = () => {
+export const Header = () => {
   return (
-    <header className="header">
-      <div className="logo">
-        <h1>MyApp</h1>
-      </div>
+    <header>
+      <h1>MyApp</h1>
     </header>
   );
 };
-
-export default Header;

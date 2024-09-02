@@ -1,10 +1,9 @@
-import './App.css'
-import Header from './components/header'
+import { Header } from "./components/header";
 
 const App = () => (
-    <>
-      <Header />
-    </>
-)
+  <>
+    <Header />
+  </>
+);
 
-export default App
+export default App;
