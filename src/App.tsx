@@ -2,7 +2,7 @@ import { Header } from "./components/header";
 import { ThemeProvider } from "@emotion/react";
 import { Colors } from "./theme";
 import { CardGrid } from "./components/card-grid";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Character } from "./types";
 import { CHARACTERS_ARRAY } from "./constants";
 import { shuffleCards } from "./helpers/shuffle-cards";
@@ -15,6 +15,23 @@ import { Modal } from "./components/modal";
  */
 
 export const LOCAL_STORAGE_BEST_SCORE_KEY = "bestScore";
+
+/**
+ * Helpers
+ */
+
+const cacheImages = async (charactersArray: Character[]): Promise<void> => {
+  const promises = charactersArray.map(({ image }) => {
+    return new Promise<void>((resolve, reject) => {
+      const img = new Image();
+      img.src = image;
+      img.onload = () => resolve();
+      img.onerror = () => reject();
+    });
+  });
+
+  await Promise.all(promises);
+};
 
 /**
  * App Component
@@ -56,6 +73,10 @@ const App = () => {
     setDisableAllCards(false);
     // set a new shuffled deck of cards
     setCards(shuffleCards(CHARACTERS_ARRAY.concat(CHARACTERS_ARRAY)));
+  }, []);
+
+  useEffect(() => {
+    cacheImages(CHARACTERS_ARRAY);
   }, []);
 
   return (
