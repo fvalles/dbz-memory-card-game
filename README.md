@@ -14,6 +14,7 @@ The app can be executed writing `npm run start` from the root directory
 
 - **Reusable components** were created. They are located in `src/components`.
 - **Typographic reusable components** are located in `src/components/typography`.
+- **Fisher–Yates shuffle algorithm** was used to shuffle cards deck.
 - **A color palette** was created inside of `src/theme` and shared through a `<ThemeProvider />` to all Styled Components.
 - `Local Storage` was used to persist the user best score.
 - **Custom DBZ favicon** was used.
