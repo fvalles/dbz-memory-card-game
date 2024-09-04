@@ -8,27 +8,27 @@ import { Character } from "./types";
 
 export const CHARACTERS_ARRAY: Character[] = [
   {
-    type: "goku",
+    name: "goku",
     image: goku,
   },
   {
-    type: "vegeta",
+    name: "vegeta",
     image: vegeta,
   },
   {
-    type: "piccolo",
+    name: "piccolo",
     image: piccolo,
   },
   {
-    type: "bulma",
+    name: "bulma",
     image: bulma,
   },
   {
-    type: "krilin",
+    name: "krilin",
     image: krilin,
   },
   {
-    type: "master-roshi",
+    name: "master-roshi",
     image: masterRoshi,
   },
 ];

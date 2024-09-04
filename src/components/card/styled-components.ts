@@ -1,17 +1,32 @@
 import styled from "@emotion/styled";
+import { CardProps } from "./types";
 
-export const CardContainer = styled.div`
+export const CardContainer = styled.div<
+  Pick<CardProps, "isFlipped" | "isInactive">
+>`
   align-items: center;
   background-image: url("card-background.png");
   background-position: center center;
   background-size: cover;
   border-radius: 5px;
-  box-shadow: 2px 2px 4px 4px ${({theme}) => theme.Colors.gray};
+  box-shadow: 2px 2px 4px 4px ${({ theme }) => theme.Colors.gray};
   display: flex;
   justify-content: center;
   height: 240px;
   margin: 0px 0px 20px 0px;
   width: 250px;
+  transform: ${({ isFlipped }) => (isFlipped ? "rotateY(180deg)" : "none")};
+  opacity: ${({ isInactive }) => (isInactive ? 0.25 : 1)};
+  transition: 0.3s;
+  transform-style: preserve-3d;
+  cursor: ${({ isInactive }) => (isInactive ? "default" : "pointer")};
+
+  &:hover {
+    box-shadow: ${({ isInactive, theme }) =>
+      !isInactive
+        ? `0 0 10px 5px ${theme.Colors.darkRed}`
+        : `2px 2px 4px 4px ${theme.Colors.gray}`};
+  }
 `;
 
 export const StyledImg = styled.img`
