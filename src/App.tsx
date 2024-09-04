@@ -1,7 +1,7 @@
 import { Header } from "./components/header";
 import { ThemeProvider } from "@emotion/react";
 import { Colors } from "./theme";
-import { Main } from "./components/main";
+import { CardGrid } from "./components/card-grid";
 import { useCallback, useState } from "react";
 import { Character } from "./types";
 import { CHARACTERS_ARRAY } from "./constants";
@@ -61,7 +61,7 @@ const App = () => {
   return (
     <ThemeProvider theme={{ Colors }}>
       <Header onRestart={handleRestart} />
-      <Main
+      <CardGrid
         bestScore={bestScore}
         cards={cards}
         clearedCards={clearedCards}

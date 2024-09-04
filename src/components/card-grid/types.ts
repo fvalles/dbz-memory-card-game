@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 import { Character } from "../../types";
 
-export interface MainProps {
+export interface CardGridProps {
   bestScore: number;
   setBestScore: Dispatch<SetStateAction<number>>;
   cards: Character[];

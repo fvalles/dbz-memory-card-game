@@ -1,15 +1,15 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef } from "react";
 import { Card } from "../card";
-import { CardsContainer, StyledMain } from "./styled-components";
-import { MainProps } from "./types";
+import { CardsContainer, StyledCardGrid } from "./styled-components";
+import { CardGridProps } from "./types";
 import { CHARACTERS_ARRAY } from "../../constants";
 import { LOCAL_STORAGE_BEST_SCORE_KEY } from "../../App";
 
 /**
- * Main Component
+ * CardGrid Component
  */
 
-export const Main = ({
+export const CardGrid = ({
   bestScore,
   cards,
   clearedCards,
@@ -22,7 +22,7 @@ export const Main = ({
   setDisableAllCards,
   setMoves,
   setOpenedCards,
-}: MainProps) => {
+}: CardGridProps) => {
   const flipCardsTimeout = useRef(0);
 
   const disableCards = useCallback(() => {
@@ -97,7 +97,7 @@ export const Main = ({
   }, [clearedCards]);
 
   return (
-    <StyledMain>
+    <StyledCardGrid>
       <CardsContainer>
         {cards.map(({ image, name }, index) => {
           return (
@@ -114,6 +114,6 @@ export const Main = ({
           );
         })}
       </CardsContainer>
-    </StyledMain>
+    </StyledCardGrid>
   );
 };

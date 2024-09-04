@@ -10,7 +10,7 @@ export const CardsContainer = styled.div`
   column-gap: 20px;
 `;
 
-export const StyledMain = styled.main`
+export const StyledCardGrid = styled.main`
   display: flex;
   justify-content: center;
 `;
