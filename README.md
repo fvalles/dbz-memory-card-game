@@ -8,7 +8,7 @@ It was developed with **React JS**, **Typescript**, **Emotion styled Components*
 
 The app can be executed writing `npm run start` from the root directory
 
-**[👉🏼 Go to DBZ Memory Card Game on Netlify 👈🏼] (https://main--dbz-memory-card-game.netlify.app/)**
+**[👉🏼 Go to DBZ Memory Card Game on Netlify 👈🏼] (https://app.netlify.com/sites/dbz-memory-card-game/deploys)**
 
 ## Coding details
 
