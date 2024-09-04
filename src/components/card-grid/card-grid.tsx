@@ -4,6 +4,7 @@ import { CardsContainer, StyledCardGrid } from "./styled-components";
 import { CardGridProps } from "./types";
 import { CHARACTERS_ARRAY } from "../../constants";
 import { LOCAL_STORAGE_BEST_SCORE_KEY } from "../../App";
+import { useWindowWidth } from "@react-hook/window-size";
 
 /**
  * CardGrid Component
@@ -24,6 +25,7 @@ export const CardGrid = ({
   setOpenedCards,
 }: CardGridProps) => {
   const flipCardsTimeout = useRef(0);
+  const width = useWindowWidth();
 
   const disableCards = useCallback(() => {
     setDisableAllCards(true);
@@ -98,7 +100,7 @@ export const CardGrid = ({
 
   return (
     <StyledCardGrid>
-      <CardsContainer>
+      <CardsContainer width={width}>
         {cards.map(({ image, name }, index) => {
           return (
             <Card

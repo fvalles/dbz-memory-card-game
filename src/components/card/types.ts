@@ -7,3 +7,9 @@ export interface CardProps extends Character {
   isCleared: boolean;
   onClick: (index: number) => void;
 }
+
+export interface CardContainerProps
+  extends Pick<CardProps, "isFlipped" | "isCleared"> {
+  width: number;
+  height: number;
+}

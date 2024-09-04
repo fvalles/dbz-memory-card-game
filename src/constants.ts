@@ -32,3 +32,11 @@ export const CHARACTERS_ARRAY: Character[] = [
     image: masterRoshi,
   },
 ];
+
+export const BREAKPOINT = {
+  XS: 500,
+  S: 700,
+  M: 900,
+  L: 1000,
+  XL: 1200,
+};

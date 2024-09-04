@@ -9,14 +9,14 @@ export const StyledHeader = styled.header`
   width: 100%;
 `;
 
-export const HeaderButton = styled.button`
+export const HeaderButton = styled.button<{width: number}>`
   align-items: center;
   background-color: ${({ theme }) => theme.Colors.lightRed};
   border-radius: 20px;
   display: flex;
   justify-content: center;
   padding: 10px 0px;
-  width: 130px;
+  width:${({ width }) => width > 700 ? "130px" : "90px" };
 
   :hover {
     background-color: ${({ theme }) => theme.Colors.darkRed};
