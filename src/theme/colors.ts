@@ -10,7 +10,6 @@ export const Colors = {
   darkOrange: palette.lustyOrange,
 
   /** Blues */
-  lightBlue: palette.chineseBlue,
   darkBlue: palette.nuitBlanche,
 
   /** Yellows */

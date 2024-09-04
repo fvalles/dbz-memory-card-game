@@ -79,7 +79,7 @@ export const CardGrid = ({
     [openedCards]
   );
 
-  const checkIsInactive = useCallback(
+  const checkIsCleared = useCallback(
     (name: string) => {
       return clearedCards.includes(name);
     },
@@ -107,7 +107,7 @@ export const CardGrid = ({
               index={index}
               name={name}
               isDisabled={disableAllCards}
-              isInactive={checkIsInactive(name)}
+              isCleared={checkIsCleared(name)}
               isFlipped={checkIsFlipped(index)}
               onClick={handleCardClick}
             />

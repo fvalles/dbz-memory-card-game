@@ -8,7 +8,6 @@ export const palette = {
   lustyOrange: "#e56e2a",
 
   /** Blues */
-  chineseBlue: "#365491",
   nuitBlanche: "#1c4595",
 
   /** Yellows */

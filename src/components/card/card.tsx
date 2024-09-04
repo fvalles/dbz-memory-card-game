@@ -11,21 +11,21 @@ export const Card = ({
   name,
   isDisabled,
   isFlipped,
-  isInactive,
+  isCleared,
   onClick,
   index,
 }: CardProps) => {
   const handleClick = () => {
-    !isFlipped && !isDisabled && !isInactive && onClick(index);
+    !isFlipped && !isDisabled && !isCleared && onClick(index);
   };
 
   return (
     <CardContainer
       onClick={handleClick}
       isFlipped={isFlipped}
-      isInactive={isInactive}
+      isCleared={isCleared}
     >
-      {isFlipped || isInactive ? (
+      {isFlipped || isCleared ? (
         <StyledImg src={image} alt={name} />
       ) : (
         <StyledImg src={fourStarsBall} alt="four stars ball" />

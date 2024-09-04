@@ -4,6 +4,6 @@ export interface CardProps extends Character {
   index: number;
   isDisabled: boolean;
   isFlipped: boolean;
-  isInactive: boolean;
+  isCleared: boolean;
   onClick: (index: number) => void;
 }
