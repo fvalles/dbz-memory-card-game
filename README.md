@@ -19,3 +19,10 @@ The app can be executed writing `npm run start` from the root directory
 - **Custom DBZ favicon** was used.
 - **Helpers** were created inside of `src/helpers`.
 - **Media queries** were implemented based on different breakpoints to support responsive web design.
+- A **Custom Modal** was implemented to inform the user that they completed the game.
+- Main Components
+  - **Header**: A component that displays the title of the game and a reset button.
+  - **CardGrid**: A component that displays the grid of cards.
+  - **Card**: A component that represents a single card.
+- Personalization
+  - Both the styled components theme and the modal component were created
